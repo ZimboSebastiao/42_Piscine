@@ -1,55 +1,59 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zimbo <zimbo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/15 18:04:42 by zimbo             #+#    #+#             */
-/*   Updated: 2025/04/15 22:10:07 by zimbo            ###   ########.fr       */
+/*   Created: 2025/04/15 21:52:37 by zimbo             #+#    #+#             */
+/*   Updated: 2025/04/15 23:25:36 by zimbo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_comb(void)
+void	ft_print_comb2(void);
+
+void	ft_print_comb2(void)
 {
-	int a;
-	int b;
-	int c;
+	int	i;
+	int	j;
 
-	a = 0 + '0';
-	b = 0 + '0';
-	c = 0 + '0';
-
-	while (a <= '7')
+	i = 0;
+	while (i <= 98)
 	{
-		b = a + 1;
-		while (b <= '8')
+		j = i + 1;
+		while (j <= 99)
 		{
-			c = b + 1;
-			while (c <= '9')
+			char	i1;
+			char	i2;
+			char	j1;
+			char	j2;
+
+			i1 = i / 10 + '0';
+			i2 = i % 10 + '0';
+			j1 = j / 10 + '0';
+			j2 = j % 10 + '0';
+
+			write(1, &i1, 1);
+			write(1, &i2, 1);
+			write(1, " ", 1);
+			write(1, &j1, 1);
+			write(1, &j2, 1);
+
+			if (!(i == 98 && j == 99 ))
 			{
-				write(1, &a, 1);
-				write(1, &b, 1);
-				write(1, &c, 1);
-				
-				if (a != '7' || b != '8' || c != '9')
-				{
-					write(1, ",", 1);
-					write(1, " ", 1);
-				}
-				c++;
+				write (1, ", ", 2);
 			}
-			b++;
+			j++;
 		}
-		a++;
+		i++;
 	}
 }
 
-// int main()
+// int main(void)
 // {
-// 	ft_print_comb();
+// 	ft_print_comb2();
 // 	write(1, "\n", 1);
 // 	return (0);
 // }
