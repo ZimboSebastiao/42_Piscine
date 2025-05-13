@@ -6,7 +6,7 @@
 /*   By: zimbo <zimbo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 16:44:46 by zimbo             #+#    #+#             */
-/*   Updated: 2025/04/15 16:59:54 by zimbo            ###   ########.fr       */
+/*   Updated: 2025/05/13 00:59:06 by zimbo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 void	ft_putchar(char c);
 
+int main()
+{
+	ft_putchar(79);
+	write(1, "\n", 1);
+	return (0);
+}
+
 void	ft_putchar(char c)
 {
     write(1, &c, 1);
 }
-
-// int main()
-// {
-//     ft_putchar('z');
-//     write(1, "\n", 1);
-//     return (0);
-// }
