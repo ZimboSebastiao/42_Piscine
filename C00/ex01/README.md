@@ -6,6 +6,41 @@
 <br>
 
 ---
+
+## 📚 Sumário
+
+* [1. Objetivo e Contexto](#1-objetivo-e-contexto)
+
+  * [Descrição Formal](#descrição-formal)
+  * [Relevância](#relevância)
+
+* [2. Abordagem Técnica](#2-abordagem-técnica)
+
+  * [Estratégia Adotada](#estratégia-adotada)
+  * [Pseudocódigo](#pseudocódigo)
+
+* [3. Implementação em C](#3-implementação-em-c)
+
+  * [Ciclo de vida do programa em C](#ciclo-de-vida-do-programa-em-c)
+  * [Estrutura Interna do Compilador (como o GCC)](#estrutura-interna-do-compilador-como-o-gcc)
+  * [O que o Kernel faz com `write()`](#o-que-o-kernel-faz-com-write)
+  * [Memória: quanto ocupa i?](#memória-quanto-ocupa-i)
+  * [ASCII e representação binária](#ascii-e-representação-binária)
+  * [O que acontece na RAM?](#o-que-acontece-na-ram)
+  * [O terminal](#o-terminal)
+  * [Gráficos de Desempenho (usando tabelas ASCII)](#gráficos-de-desempenho-usando-tabelas-ascii)
+
+* [4. Notas de Revisão](#4-notas-de-revisão)
+
+  * [Revisão Pós-Implementação](#revisão-pós-implementação)
+  * [Testes de Diagnóstico](#testes-de-diagnóstico)
+  * [Análise Técnica](#análise-técnica)
+  * [Aprendizados Consolidados](#aprendizados-consolidados)
+
+* [5. Referências e Leituras Adicionais](#5-referências-e-leituras-adicionais)
+
+---
+
 ## 1. Objetivo e Contexto 
 
 ### Descrição Formal
