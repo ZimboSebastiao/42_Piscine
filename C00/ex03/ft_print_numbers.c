@@ -6,7 +6,7 @@
 /*   By: zimbo <zimbo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 17:38:26 by zimbo             #+#    #+#             */
-/*   Updated: 2025/04/15 17:43:02 by zimbo            ###   ########.fr       */
+/*   Updated: 2025/05/17 00:30:37 by zimbo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,18 @@
 
 void	ft_print_numbers(void);
 
+int main(void)
+{
+	ft_print_numbers();
+	write(1, "\n", 1);
+	return (0);
+}
+
 void	ft_print_numbers(void)
 {
-	int i;
+	char i;
 
-	i = 0 + '0';
+	i = '0';
 
 	while (i <= '9')
 	{
@@ -26,9 +33,3 @@ void	ft_print_numbers(void)
 		i++;
 	}
 }
-
-// int main(void)
-// {
-// 	ft_print_numbers();
-// 	return (0);
-// }
