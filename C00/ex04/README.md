@@ -31,7 +31,56 @@ parâmetro. Se n for negativo, exiba ’N’. Se n for positivo ou nulo, exiba �
 
 Esse exercício é um ponto de partida para entender estruturas condicionais básicas em C, manipulação direta de saída com `write()`, e como decisões são traduzidas em baixo nível na arquitetura do processador.
 
+
+### O que é uma Estrutura de Decisão?
+
+Uma estrutura de decisão é um bloco de código que permite ao programa **tomar decisões** com base em **condições lógicas**.
+
+Em termos simples:
+> "Se algo for verdadeiro, faça isso. Senão, faça outra coisa."
+
+### Como funciona internamente (nável baixo)
+
+Quando o compilador encontra uma estrutura de decisão, ele traduz para *instruções de salto condicional** no assembly. A CPU executa essas instruções com base em **sinais internos** do hardware **(flags)**, que indicam o resultado de comparações.
+
+**Exemplo simplificado (Assembly x86-64):**
+
+```bash
+cmp rdi, 0           ; # Compara o valor de RDI com 0 (64 bits)
+jg  label_positivo   ; # Se for maior, salta para "positivo"
+jmp label_negativo   ; # Caso contrário, vai para "negativo"
+
+```
+
+- **cmp** faz a comparação.
+- **jg** (jump if greater) verifica as flags e decide se salta.
+- **jmp** (jump) garante o fluxo alternativo caso a condição não seja satisfeita.
+
+> A CPU não entende **"if"**, mas compreende **instruções binárias de salto**, que alteram a sequência normal de execução com base em condições.
+
+### Componentes de uma estrutura de decisão
+
+1. **Condição:** Expressão lógica que retorna verdadeiro ou falso.
+2. **Caminhos distintos:** Blocos de código que podem ser ou não executados.
+3. **Desvio de fluxo:** Alteração da sequência natural de execução conforme o resultado da condição.
+
+### Tipos comuns de estrutura de decisão
+
+| Tipo      | Exemplo em C                    | Significado                          |
+| --------- | ------------------------------- | ------------------------------------ |
+| if      | if (a == b)                   | Executa se a condição for verdadeira |
+| if-else | if (...) { ... } else { ... } | Escolhe entre dois caminhos          |
+| else if | if (...) else if (...)        | Verifica múltiplas opções            |
+| switch  | switch(x) { case 1: ... }     | Seleção entre vários valores fixos   |
+
+### Na memória e execução
+
+- A estrutura condicional **não armazena dados** por si só.
+- O que se altera é o **fluxo de instruções** que o processador irá seguir.
+- Esse fluxo é controlado por **endereços no segmento** `.text` (código), e as instruções de salto (**jmp, je, jne, jg, etc.**) redirecionam a execução para esses pontos conforma os resultados das comparações.
+
 ---
+
 ## 2. Abordagem Técnica
 
 ### Estratégia Adotada

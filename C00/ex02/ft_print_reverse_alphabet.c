@@ -6,7 +6,7 @@
 /*   By: zimbo <zimbo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 17:27:37 by zimbo             #+#    #+#             */
-/*   Updated: 2025/05/15 01:12:07 by zimbo            ###   ########.fr       */
+/*   Updated: 2025/05/18 02:11:59 by zimbo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	ft_print_reverse_alphabet(void);
 
-int main(void)
-{
-	ft_print_reverse_alphabet();
-	write(1, "\n", 1);
-	return (0);
-}
+// int main(void)
+// {
+// 	ft_print_reverse_alphabet();
+// 	write(1, "\n", 1);
+// 	return (0);
+// }
 
 void	ft_print_reverse_alphabet(void)
 {
