@@ -6,7 +6,7 @@
 /*   By: zimbo <zimbo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 23:29:37 by zimbo             #+#    #+#             */
-/*   Updated: 2025/05/21 06:37:17 by zimbo            ###   ########.fr       */
+/*   Updated: 2025/05/21 07:01:55 by zimbo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	ft_putnbr(int nb);
 
-int main()
-{
-	ft_putnbr(836);
-	write(1, "\n", 1);
-	return (0);
-}
+// int main()
+// {
+// 	ft_putnbr(836);
+// 	write(1, "\n", 1);
+// 	return (0);
+// }
 
 void	ft_putnbr(int nb)
 {

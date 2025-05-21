@@ -6,7 +6,7 @@
 /*   By: zimbo <zimbo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 21:52:37 by zimbo             #+#    #+#             */
-/*   Updated: 2025/05/18 03:28:30 by zimbo            ###   ########.fr       */
+/*   Updated: 2025/05/21 07:02:06 by zimbo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	ft_print_comb2(void);
 
-int main(void)
-{
-	ft_print_comb2();
-	write(1, "\n", 1);
-	return (0);
-}
+// int main(void)
+// {
+// 	ft_print_comb2();
+// 	write(1, "\n", 1);
+// 	return (0);
+// }
 
 void	ft_print_comb2(void)
 {

@@ -6,7 +6,7 @@
 /*   By: zimbo <zimbo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 23:55:57 by zimbo             #+#    #+#             */
-/*   Updated: 2025/04/17 00:43:44 by zimbo            ###   ########.fr       */
+/*   Updated: 2025/05/21 07:01:40 by zimbo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,13 @@
 
 void	ft_print_combn(int n);
 
-#include <unistd.h>
+
+
+// int main()
+// {
+// 	ft_print_combn(9);
+// 	return (0);
+// }
 
 void	ft_print_combn(int n)
 {
@@ -60,9 +66,3 @@ void	ft_print_combn(int n)
 	}
 }
 
-
-int main()
-{
-	ft_print_combn(9);
-	return (0);
-}
