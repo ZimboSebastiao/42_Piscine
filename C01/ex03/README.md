@@ -50,9 +50,6 @@ Divisão inteira e resto (módulo) são operações fundamentais em matemática 
 
 ### Estratégia Adotada
 
-
-### Estratégia Adotada
-
 * Receber os valores `a` e `b` por valor.
 * Utilizar operadores aritméticos `/` (divisão inteira) e `%` (módulo).
 * Utilizar os ponteiros `*div` e `*mod` para armazenar os resultados.
