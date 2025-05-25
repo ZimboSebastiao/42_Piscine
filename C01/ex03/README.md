@@ -1,7 +1,7 @@
-**Exercício:** ft_putnbr.c 
+**Exercício:** ft_div_mod.c 
 **Módulo:** C01
 **Versão da Solução:** 1.0 
-**Área:** ``
+**Área:** `Aritmética Inteira, Manipulação de Ponteiros `
 **Dificuldade:** `Iniciante`
 <br>
 
@@ -22,17 +22,28 @@
 
 ### Descrição Formal
 
-Escreva uma função que tenha um ponteiro para int em parâmetro e dê ao int o
-valor de 42.
+Escreva uma função ft_div_mod que tenha a seguinte prototipagem:
+```c
+void ft_div_mod(int a, int b, int *div, int *mod);
+```
+
+Essa função deve calcular:
+- a divisão inteira de `a por b`, armazenando o resultado no endereço apontado por `div`
+- o resto da divisão de `a por b`, armazenando no endereço apontado por `mod`.
 
 ---
 
 ### Relevância
 
+Este exercício introduz dois conceitos essenciais em C:
+- **Manipulação de ponteiros:** passar endereços de memória como argumentos de função.
+- **Funções com múltiplos resultados:** uma técnica comum em C quando se deseja retornar mais de um valor.
 
+Além disso, treina a compreensão sobre como a aritmética inteira se comporta em divisões e como acessar e modificar valores através de ponteiros.
 
 ### Importância Matemática
 
+Divisão inteira e resto (módulo) são operações fundamentais em matemática discreta e teoria dos números. São amplamente utilizadas em algoritmos de criptografia, estruturas de dados baseadas em hashing, e problemas clássicos como o algoritmo de Euclides (MDC).
 
 
 ## 2. Abordagem Técnica
@@ -40,17 +51,34 @@ valor de 42.
 ### Estratégia Adotada
 
 
-- **Algoritmo:** 
-- **Complexidade:**  
-  - Tempo: O() 
-  - Espaço: O()
+### Estratégia Adotada
+
+* Receber os valores `a` e `b` por valor.
+* Utilizar operadores aritméticos `/` (divisão inteira) e `%` (módulo).
+* Utilizar os ponteiros `*div` e `*mod` para armazenar os resultados.
+
+---
+
+* **Algoritmo:**
+
+  * Aplicar a fórmula `*div = a / b`
+  * Aplicar a fórmula `*mod = a % b`
+
+* **Complexidade:**
+
+  * Tempo: O(1)
+  * Espaço: O(1)
+
 - **Restrições:**  
-  - Não utilizar bibliotecas além de `unistd.h`  
-  - Somente a função `write` é permitida para saída  
+  - Não utilizar nenhuma biblioteca.
 --- 
 ### Pseudocódigo
 
-```plaintext
+```bash
+função ft_div_mod(a, b, *div, *mod):
+    se b for diferente de 0:
+        *div ← a dividido por b
+        *mod ← a módulo b
 
 ```
 ---
@@ -58,13 +86,32 @@ valor de 42.
 
 ```c
 
+#include <stdio.h>
 
+void	ft_div_mod(int a, int b, int *div, int *mod);
+
+int	main()
+{
+
+	int	*div, *mod;
+
+	ft_div_mod(10, 3, div, mod);
+	printf("Divisão: %d\n Resto: %d\n", *div, *mod);
+	return (0);
+}
+
+void	ft_div_mod(int a, int b, int *div, int *mod)
+{
+	*div = (a / b);
+	*mod = (a % b);
+}
 
 ```
 
 #### Saída esperada
 ```bash
-
+Divisão: 3
+Resto: 1
 ```
 
 
@@ -80,14 +127,12 @@ valor de 42.
 ---
 
 
-## 4. Notas de Revisão
 
-### **Revisão Pós-Implementação:** 
+## 4. Referências e Leituras Adicionais
+
+* 📘 [Manual do Operador Módulo (%) em C – GeeksforGeeks](https://www.geeksforgeeks.org/modulus-operator-in-c-cpp/)
+* 📘 [Ponteiros em C – Curso Harvard CS50 (pt-BR traduzido)](https://cs50.harvard.edu/x/2023/notes/4/)
+* 📘 \[The C Programming Language – Kernighan & Ritchie, Capítulo 5]
 
 
-
----
-
-
-## 5. Referências e Leituras Adicionais
 
