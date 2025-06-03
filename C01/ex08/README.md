@@ -1,5 +1,5 @@
 **Exercício:** ft_sort_int_tab.c  
-**Módulo:** C02  
+**Módulo:** C01  
 **Versão da Solução:** 1.0  
 **Área:** `Algoritmos de Ordenação`  
 **Dificuldade:** `Iniciante`  
